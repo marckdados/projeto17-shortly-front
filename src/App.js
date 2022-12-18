@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Top from "./components/Top/Top";
 import GlobalStyle from "./assets/style/globalStyle";
 import Logo from "./components/Logo/Logo";
+import RakingPage from "./pages/RankingPage";
 function App() {
   return (
     <BrowserRouter>
@@ -10,7 +11,9 @@ function App() {
       <Container>
         <Top />
         <Logo />
-        <Routes></Routes>
+        <Routes>
+          <Route path="/" element={<RakingPage />} />
+        </Routes>
       </Container>
     </BrowserRouter>
   );
