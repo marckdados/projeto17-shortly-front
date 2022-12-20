@@ -6,6 +6,7 @@ import Logo from "./components/Logo/Logo";
 import RakingPage from "./pages/RankingPage";
 import LinksPage from "./pages/LinksPage";
 import SignUpPage from "./pages/SignUpPage";
+import LoginPage from "./pages/LoginPage";
 const logged = true;
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
             <Route path="/" element={<RakingPage />} />
           )}
           <Route path="/sign-up" element={<SignUpPage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/ranking" element={<RakingPage />} />
         </Routes>
       </Container>
     </BrowserRouter>
