@@ -5,6 +5,7 @@ import GlobalStyle from "./assets/style/globalStyle";
 import Logo from "./components/Logo/Logo";
 import RakingPage from "./pages/RankingPage";
 import LinksPage from "./pages/LinksPage";
+import SignUpPage from "./pages/SignUpPage";
 const logged = true;
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           ) : (
             <Route path="/" element={<RakingPage />} />
           )}
+          <Route path="/sign-up" element={<SignUpPage />} />
         </Routes>
       </Container>
     </BrowserRouter>
