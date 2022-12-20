@@ -4,6 +4,8 @@ import Top from "./components/Top/Top";
 import GlobalStyle from "./assets/style/globalStyle";
 import Logo from "./components/Logo/Logo";
 import RakingPage from "./pages/RankingPage";
+import LinksPage from "./pages/LinksPage";
+const logged = true;
 function App() {
   return (
     <BrowserRouter>
@@ -12,7 +14,11 @@ function App() {
         <Top />
         <Logo />
         <Routes>
-          <Route path="/" element={<RakingPage />} />
+          {logged ? (
+            <Route path="/" element={<LinksPage />} />
+          ) : (
+            <Route path="/" element={<RakingPage />} />
+          )}
         </Routes>
       </Container>
     </BrowserRouter>
